@@ -66,6 +66,7 @@
                 "layout": "Layout",
                 "fill_container": "Full container",
                 "next_days": "Dagar fram i tiden",
+                "max_items": "Max antal visade objekt",
                 "filter_events": "Filtrera händelser efter mönster",
                 "drop_todayevents_from": "Från vilken tid ska heldagshändelser gömmas",
                 "full_size": "Kort uan marginal",

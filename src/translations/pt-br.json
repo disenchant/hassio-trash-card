@@ -53,6 +53,7 @@
         "full_size": "Cartão sem margem",
         "icon_size": "Tamanho do ícone",
         "next_days": "Dias no futuro",
+                "max_items": "Máx. de itens mostrados",
         "icon_color": "Cor do ícone",
         "with_label": "Exibir rótulo",
         "use_summary": "Resumo do evento em vez de rótulo",

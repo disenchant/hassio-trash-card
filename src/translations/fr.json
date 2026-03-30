@@ -74,6 +74,7 @@
                 "layout": "Disposition",
                 "fill_container": "Remplir le conteneur",
                 "next_days": "Jours dans le futur",
+                "max_items": "Nombre max d'éléments affichés",
                 "filter_events": "Filtrer les événements par motif",
                 "drop_todayevents_from": "A partir de quelle heure masquer l'événement de toute la journée ?",
                 "full_size": "Carte sans marge",

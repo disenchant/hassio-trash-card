@@ -66,6 +66,7 @@
                 "layout": "Izkārtojums",
                 "fill_container": "Piepildīt konteineru",
                 "next_days": "Dienas nākotnē",
+                "max_items": "Maks. parādīto vienumu skaits",
                 "filter_events": "Filtrēt notikumus",
                 "drop_todayevents_from": "No kāda laika slēpt visas dienas notikumu",
                 "full_size": "Kartiņa bez robežas",

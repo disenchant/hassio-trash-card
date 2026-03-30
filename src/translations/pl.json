@@ -66,6 +66,7 @@
                 "layout": "Układ",
                 "fill_container": "Wypełnij zawartością",
                 "next_days": "Ilość dni do przodu",
+                "max_items": "Maks. liczba wyświetlanych elementów",
                 "filter_events": "Filtruj zdarzenia według wzorca",
                 "drop_todayevents_from": "Od której godziny ukryć wydarzenie całodniowe",
                 "full_size": "Karta bez marginesu",

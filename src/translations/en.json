@@ -74,6 +74,7 @@
                 "layout": "Layout",
                 "fill_container": "Fill container",
                 "next_days": "Days in the future",
+                "max_items": "Max items shown",
                 "filter_events": "Filter events by patterns",
                 "drop_todayevents_from": "From what time to hide all-day event",
                 "full_size": "Card without margin",

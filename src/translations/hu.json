@@ -66,6 +66,7 @@
         "layout": "Elrendezés",
         "fill_container": "Konténer kitöltése",
         "next_days": "Jövőbeli napok száma",
+                "max_items": "Megjelenített elemek max. száma",
         "filter_events": "Események minta szerinti szűrése",
         "drop_todayevents_from": "Mikortól rejtsük el az egésznapos eseményeket",
         "full_size": "Margó nélküli kártya",

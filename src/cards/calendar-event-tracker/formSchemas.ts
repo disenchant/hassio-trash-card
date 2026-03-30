@@ -120,6 +120,19 @@ const getSchema = (customLocalize: LocalizeFunc, currentValues: CalendarEventTra
           }
         },
         {
+          name: 'max_items',
+          label: customLocalize(`editor.card.generic.max_items`),
+          default: 5,
+          selector: {
+            number: {
+              min: 1,
+              max: 100,
+              step: 1,
+              mode: 'box'
+            }
+          }
+        },
+        {
           name: 'refresh_rate',
           label: customLocalize(`editor.form.refresh_rate.title`),
           helper: customLocalize(`editor.form.refresh_rate.helper`),

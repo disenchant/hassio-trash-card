@@ -66,6 +66,7 @@
                 "layout": "Lay-out",
                 "fill_container": "Vul container",
                 "next_days": "Aantal dagen vooruit kijken",
+                "max_items": "Max. aantal getoonde items",
                 "filter_events": "Filter kalenderactiviteiten op patronen",
                 "drop_todayevents_from": "Tijdstip om afvalinzameling voor die dag te verbergen",
                 "full_size": "Kaart zonder marge",

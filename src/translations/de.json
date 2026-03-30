@@ -66,6 +66,7 @@
                 "layout": "Layout",
                 "fill_container": "Container ausfüllen",
                 "next_days": "Tage in der Zukunft",
+                "max_items": "Max. angezeigte Elemente",
                 "filter_events": "Ereignisse nach Vorlagen filtern",
                 "drop_todayevents_from": "Ab wieviel Uhr Ganztages Ereignis ausblenden",
                 "full_size": "Karte ohne Seitenrand",

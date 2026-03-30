@@ -46,6 +46,7 @@ interface CalendarEventTrackerConfig {
   location?: string;
   next_days?: number;
   items_per_row?: number;
+  max_items?: number;
   filter_events?: boolean;
   full_size?: boolean;
   drop_todayevents_from?: string;
@@ -85,6 +86,7 @@ const entityCardConfigStruct = assign(
     hide_time_range: optional(boolean()),
     next_days: optional(integer()),
     items_per_row: optional(integer()),
+    max_items: optional(integer()),
     refresh_rate: optional(integer()),
     drop_todayevents_from: optional(string()),
     event_grouping: optional(boolean()),

@@ -74,6 +74,7 @@
                 "layout": "Rozložení",
                 "fill_container": "Pozadí kontejneru",
                 "next_days": "Dny v budoucnosti",
+                "max_items": "Max. zobrazených položek",
                 "filter_events": "Filtrujte události podle vzorů",
                 "drop_todayevents_from": "Od jaké doby skrýt celodenní události",
                 "full_size": "Karta bez mezer",

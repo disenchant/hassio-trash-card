@@ -77,9 +77,11 @@ const getCalendarData = async (
 
   debuggerInstance.log(`eventsToItems`, eventItems);
 
-  return !config.event_grouping ?
+  const finalItems = !config.event_grouping ?
     eventItems :
     filterDuplicatedItems(eventItems);
+
+  return finalItems.slice(0, config.max_items ?? 5);
 };
 
 export {

@@ -66,6 +66,7 @@
                 "layout": "Postavitev",
                 "fill_container": "Napolni prostor",
                 "next_days": "Dnevi v prihodnosti",
+                "max_items": "Največje število prikazanih elementov",
                 "filter_events": "Filtriraj dogodke po vzorcih",
                 "drop_todayevents_from": "Od katere ure dalje naj se skrije celodnevni dogodek",
                 "full_size": "Kartica brez roba strani",

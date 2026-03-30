@@ -66,6 +66,7 @@
                 "layout": "Layout",
                 "fill_container": "Fyld container",
                 "next_days": "Dage frem i tiden",
+                "max_items": "Maks. antal viste elementer",
                 "filter_events": "Filtrer begivenheder efter mønstre",
                 "drop_todayevents_from": "Fra hvilken tid skal heldags begivenhed skjules",
                 "full_size": "Kort uden margen",
