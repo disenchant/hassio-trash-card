@@ -50,12 +50,13 @@ const eventToItem = (event: CalendarEvent | undefined, { pattern, useSummary }: 
     return [ getData(event, { ...othersPattern, idx: pattern.indexOf(othersPattern) }, useSummary) ];
   }
 
+  const isTask = event.content.entity?.startsWith('todo.');
   return [
     getData(
       event,
       {
         type: 'others',
-        icon: 'mdi:calendar',
+        icon: isTask ? 'mdi:crop-square' : 'mdi:calendar',
         color: 'grey',
         idx: 0
       },

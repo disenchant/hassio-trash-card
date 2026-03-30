@@ -76,6 +76,7 @@
                 "next_days": "Days in the future",
                 "max_items": "Max items shown",
                 "filter_events": "Filter events by patterns",
+                "show_completed": "Show completed tasks",
                 "drop_todayevents_from": "From what time to hide all-day event",
                 "full_size": "Card without margin",
                 "use_summary": "Event summary instead of label",
@@ -108,7 +109,9 @@
                         "picture_url": "Picture URL",
                         "picture_url_description": "If a picture URL is specified, the corresponding picture is displayed instead of the icon. Place an image in the `/config/www` folder and use `/local/[filename]`.",
                         "max_items": "Maximum items",
-                        "max_items_description": "Maximum number of upcoming events to show for this pattern (default is 1)."
+                        "max_items_description": "Maximum number of upcoming events to show for this pattern (default is 1).",
+                        "task_interval": "Task interval",
+                        "task_interval_description": "Days after completion when this task should recur (0 to disable)."
                     }
                 }
             }

@@ -9,6 +9,10 @@ interface CalendarItem extends CalendarEvent {
   idx?: number;
   max_items?: number;
   task_interval?: number;
+  uid?: string;
+  summary?: string;
+  entity?: string;
+  status?: string;
 }
 
 export type {

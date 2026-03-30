@@ -21,11 +21,12 @@ class BaseItemElement<T = {}> extends LitElement {
   }
 
   protected async handleTaskClick() {
-    if (!this.hass || !this.item || !this.item.entity?.startsWith('todo.')) {
+    if (!this.hass || !this.item || !this.item.content.entity?.startsWith('todo.')) {
       return;
     }
 
-    const { entity, uid, summary, task_interval, status } = this.item;
+    const { entity, uid, summary, status } = this.item.content;
+    const task_interval = this.item.task_interval;
 
     if (status === 'completed') {
       return;
@@ -59,7 +60,7 @@ class BaseItemElement<T = {}> extends LitElement {
   }
 
   protected renderIcon () {
-    const isTodo = this.item?.entity?.startsWith('todo.');
+    const isTodo = this.item?.content.entity?.startsWith('todo.');
     
     return html`
       <ha-tile-icon @click=${this.handleTaskClick} style="cursor: ${isTodo ? 'pointer' : 'default'}">
@@ -68,7 +69,7 @@ class BaseItemElement<T = {}> extends LitElement {
           .icon=${this.item?.icon}
           .hass=${this.hass}
         ></ha-state-icon>
-        ${isTodo ? html`<ha-tile-badge slot="badge" .icon=${this.item?.status === 'completed' ? 'mdi:check-circle' : 'mdi:circle-outline'}></ha-tile-badge>` : nothing}
+        ${isTodo ? html`<ha-tile-badge slot="badge" .icon=${this.item?.content.status === 'completed' ? 'mdi:check-circle' : 'mdi:circle-outline'}></ha-tile-badge>` : nothing}
       </ha-tile-icon>`;
   }
 }
