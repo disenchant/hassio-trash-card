@@ -12,7 +12,7 @@
 <a href="https://www.buymeacoffee.com/idaho" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ---
-<img width="510" alt="new-overview" src="https://github.com/idaho/hassio-trash-card/assets/664101/8adeaf6a-f236-4972-805d-e173c3aa554b">
+<img width="510" alt="new-overview" src="https://github.com/disenchant/hassio-trash-card/assets/664101/8adeaf6a-f236-4972-805d-e173c3aa554b">
 
 ---
 
@@ -41,11 +41,16 @@ Once you have both of these installed, you can install TashCard either:
 
 TrashCard is available in [HACS][hacs] (Home Assistant Community Store).
 
-1.	Install HACS if you haven’t already.
-2.	Open HACS in Home Assistant.
-3.	Go to the "Frontend" section.
-4.	Click the "+" icon.
-5.	Search for "TrashCard".
+#### As a Custom Repository
+
+1.  Install [HACS][hacs] if you haven't already.
+2.  Open HACS in Home Assistant.
+3.  Click on the three dots in the top right corner and select **Custom repositories**.
+4.  Add the URL to this repository (`https://github.com/disenchant/hassio-trash-card`) and select **Dashboard** (or **Lovelace**) as the category.
+5.  Click **Add**.
+6.  Go to the **Frontend** section.
+7.  Click the "+" icon in the bottom right corner.
+8.  Search for "TrashCard" and install it.
 
 ### Manual
 
@@ -130,16 +135,17 @@ All the options listed below are available in the lovelace editor, but configuri
 | `type`             | `organic`, `paper`, `recycle`, `waste`, `others`, `custom`        | Required    | Label which should be shown.  |
 | `label`             | string       | Required    | The label that will be displayed.  |
 | `icon`              | string       | Required    | The icon that will be displayed.  |
-| `color`             | string       | Required    | The background color of the card. |
+| `color`             | string       | Required    | The background color of the card. Supports predefined color names (e.g., `red`, `amber`) or HEX color codes (e.g., `#ff0000`). |
 | `pattern`           | string       | Required    | Pattern used to detect and display an event type. (Is tested against the calendar entry title). |
 | `picture`           | string       | Optional    | Picture URL do display an image instead of an icon. |
+| `max_items`         | number       | 1           | Maximum number of upcoming events to show for this pattern. |
 
 #### Other type trash configuration
 
 | Name                | Type                                                | Default     | Description                                                                         |
 | :------------------ | :-------------------------------------------------- | :---------- | :---------------------------------------------------------------------------------- |
 | `icon`              | string                                              | Required    | The icon that will be displayed.  |
-| `color`             | string                                              | Required    | The background color of the card. |
+| `color`             | string                                              | Required    | The background color of the card. Supports predefined color names or HEX color codes. |
 
 ---
 
@@ -199,7 +205,7 @@ pattern:
     type: others
   - label: Electric
     icon: mdi:electron-framework
-    color: pink
+    color: '#ff1493'
     type: custom
     pattern: elektro
 ```
@@ -207,30 +213,30 @@ pattern:
 ## Icons and Layouts
 
 ### Layout: icons
-<img width="482" alt="layout-icons" src="https://github.com/idaho/hassio-trash-card/assets/664101/b1509694-7ece-49a4-8f84-6298731e315f">
+<img width="482" alt="layout-icons" src="https://github.com/disenchant/hassio-trash-card/assets/664101/b1509694-7ece-49a4-8f84-6298731e315f">
 
 ### Layout: chips
-<img width="1043" alt="layout-chips" src="https://github.com/idaho/hassio-trash-card/assets/664101/c420d073-c65d-41cc-8d47-c296c1c03fd4">
+<img width="1043" alt="layout-chips" src="https://github.com/disenchant/hassio-trash-card/assets/664101/c420d073-c65d-41cc-8d47-c296c1c03fd4">
 
 ### Layout: cards
-![layout-cards](https://github.com/idaho/hassio-trash-card/assets/664101/f3f3130c-172f-42dc-aaca-2bc0c9a3bc26)
+![layout-cards](https://github.com/disenchant/hassio-trash-card/assets/664101/f3f3130c-172f-42dc-aaca-2bc0c9a3bc26)
 
 ### Using pictures instead of icons
-<img width="1032" alt="with-image" src="https://github.com/idaho/hassio-trash-card/assets/664101/212537e0-65d3-4c2c-a25c-9431d7ff04b9">
+<img width="1032" alt="with-image" src="https://github.com/disenchant/hassio-trash-card/assets/664101/212537e0-65d3-4c2c-a25c-9431d7ff04b9">
 
 
 
 <!-- Badges -->
 
 
-[commits-shield]: https://img.shields.io/github/commit-activity/y/idaho/hassio-trash-card.svg?style=for-the-badge
-[commits]: https://github.com/idaho/hassio-trash-card/commits/main
-[license-shield]: https://img.shields.io/github/license/idaho/hassio-trash-card.svg?style=for-the-badge
+[commits-shield]: https://img.shields.io/github/commit-activity/y/disenchant/hassio-trash-card.svg?style=for-the-badge
+[commits]: https://github.com/disenchant/hassio-trash-card/commits/main
+[license-shield]: https://img.shields.io/github/license/disenchant/hassio-trash-card.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/idaho/hassio-trash-card.svg?style=for-the-badge
-[releases]: https://github.com/idaho/hassio-trash-card/releases
-[downloads-badge]: https://img.shields.io/github/downloads/idaho/hassio-trash-card/total?style=for-the-badge
-[build-badge]: https://img.shields.io/github/actions/workflow/status/idaho/hassio-trash-card/build.yml?label=Build&style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/disenchant/hassio-trash-card.svg?style=for-the-badge
+[releases]: https://github.com/disenchant/hassio-trash-card/releases
+[downloads-badge]: https://img.shields.io/github/downloads/disenchant/hassio-trash-card/total?style=for-the-badge
+[build-badge]: https://img.shields.io/github/actions/workflow/status/disenchant/hassio-trash-card/build.yml?label=Build&style=for-the-badge
 
 
 
@@ -240,4 +246,4 @@ pattern:
 [home-assitant-theme-docs]: https://www.home-assistant.io/integrations/frontend/#defining-themes
 [hacs]: https://hacs.xyz
 [ui-lovelace-minimalist]: https://ui-lovelace-minimalist.github.io/UI/
-[release-url]: https://github.com/idaho/hassio-trash-card/releases
+[release-url]: https://github.com/disenchant/hassio-trash-card/releases

@@ -134,7 +134,7 @@ class TrashCardEditor extends LitElement {
 
     if (this.subElementEditorConfig) {
       const patternSchema = this.subElementEditorConfig.elementConfig?.type === 'others' ?
-        getPatternOthersSchema(this.hass.localize) :
+        getPatternOthersSchema(this.hass.localize, customLocalize) :
         getPatternSchema(customLocalize, this.hass.localize);
 
       return html`

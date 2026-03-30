@@ -6,6 +6,8 @@ interface CalendarItem extends CalendarEvent {
   icon?: string;
   type: `custom-${number}` | 'organic' | 'paper' | 'recycle' | 'waste' | 'others';
   picture?: string;
+  idx?: number;
+  max_items?: number;
 }
 
 export type {

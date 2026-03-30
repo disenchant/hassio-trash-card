@@ -4,7 +4,7 @@ import type { LocalizeFunc } from '../../utils/ha';
 import type { TrashCardConfig } from './trash-card-config';
 import type { HaFormSchema } from '../../utils/form/ha-form';
 
-const getPatternOthersSchema = (localize: LocalizeFunc) => [
+const getPatternOthersSchema = (localize: LocalizeFunc, customLocalize?: LocalizeFunc) => [
   {
     name: 'icon',
     label: localize(`ui.panel.lovelace.editor.card.generic.icon`),
@@ -17,7 +17,21 @@ const getPatternOthersSchema = (localize: LocalizeFunc) => [
     name: 'color',
     label: localize(`ui.panel.lovelace.editor.card.tile.color`),
     selector: { ui_color: {}}
-  }
+  },
+  ...customLocalize ?
+    [{
+      label: customLocalize(`editor.card.trash.pattern.fields.max_items`),
+      name: 'max_items',
+      selector: {
+        number: {
+          min: 1,
+          max: 100,
+          step: 1,
+          mode: 'box'
+        }
+      }
+    }] as HaFormSchema[] :
+    []
 ];
 
 const getPatternSchema = (customLocalize: LocalizeFunc, localize: LocalizeFunc) => [
@@ -28,7 +42,7 @@ const getPatternSchema = (customLocalize: LocalizeFunc, localize: LocalizeFunc) 
       text: {}
     }
   },
-  ...getPatternOthersSchema(localize),
+  ...getPatternOthersSchema(localize, customLocalize),
   {
     label: customLocalize(`editor.card.trash.pattern.fields.pattern`),
     name: 'pattern',
@@ -52,6 +66,18 @@ const getPatternSchema = (customLocalize: LocalizeFunc, localize: LocalizeFunc) 
       text: {}
     },
     context: { icon_entity: 'entity' }
+  },
+  {
+    label: customLocalize(`editor.card.trash.pattern.fields.max_items`),
+    name: 'max_items',
+    selector: {
+      number: {
+        min: 1,
+        max: 100,
+        step: 1,
+        mode: 'box'
+      }
+    }
   }
 ];
 

@@ -10,7 +10,9 @@ const isColorModesArray = (modes: TrashCardConfig['color_mode'] | TrashCardConfi
 
 const calculateContrast = (currentColorString: string, darkMode: boolean, parentElement?: null | HTMLElement): 'text' | 'background' => {
   try {
-    const color = new Color(`rgb(${colors[currentColorString]})`);
+    const color = currentColorString.startsWith('#') ?
+      new Color(currentColorString) :
+      new Color(`rgb(${colors[currentColorString]})`);
 
     if (parentElement) {
       const primaryTextColor = getComputedStyle(parentElement).getPropertyValue('--primary-text-color');

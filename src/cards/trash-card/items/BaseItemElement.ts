@@ -7,7 +7,6 @@ import type { TrashCardConfig } from '../trash-card-config';
 import type { CalendarItem } from '../../../utils/calendarItem';
 import type { HomeAssistant } from '../../../utils/ha';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
 class BaseItemElement<T = {}> extends LitElement {
   @state() protected readonly item?: CalendarItem & T;
 

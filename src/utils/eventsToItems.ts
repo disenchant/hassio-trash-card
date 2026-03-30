@@ -44,7 +44,24 @@ const eventToItem = (event: CalendarEvent | undefined, { pattern, useSummary }: 
     return possibleTypes.map(pat => getData(event, pat, useSummary));
   }
 
-  return [ getData(event, { ...pattern.find(pat => pat.type === 'others')!, idx: 0 }, useSummary) ];
+  const othersPattern = pattern.find(pat => pat.type === 'others');
+
+  if (othersPattern) {
+    return [ getData(event, { ...othersPattern, idx: pattern.indexOf(othersPattern) }, useSummary) ];
+  }
+
+  return [
+    getData(
+      event,
+      {
+        type: 'others',
+        icon: 'mdi:dump-truck',
+        color: 'grey',
+        idx: 0
+      },
+      useSummary
+    )
+  ];
 };
 
 const eventsToItems = (events: CalendarEvent[], options: Options): CalendarItem[] => {
@@ -58,5 +75,6 @@ const eventsToItems = (events: CalendarEvent[], options: Options): CalendarItem[
 };
 
 export {
-  eventsToItems
+  eventsToItems,
+  eventToItem
 };

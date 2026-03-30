@@ -1,16 +1,13 @@
 import type { LitElement } from 'lit';
 
 interface ColorUiSelector {
-  // eslint-disable-next-line @typescript-eslint/ban-types
   ui_color: {};
 }
 
 interface BooleanSelector {
-  // eslint-disable-next-line @typescript-eslint/ban-types
   boolean: {};
 }
 interface TimeSelector {
-  // eslint-disable-next-line @typescript-eslint/ban-types
   time: {};
 }
 interface NumberSelector {

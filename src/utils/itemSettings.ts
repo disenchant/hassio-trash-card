@@ -6,6 +6,7 @@ interface ItemSettings {
   icon?: string;
   type: 'custom' | 'organic' | 'paper' | 'recycle' | 'waste' | 'others';
   picutre?: string;
+  max_items?: number;
 }
 
 export type {
