@@ -55,7 +55,7 @@ const eventToItem = (event: CalendarEvent | undefined, { pattern, useSummary }: 
       event,
       {
         type: 'others',
-        icon: 'mdi:dump-truck',
+        icon: 'mdi:calendar',
         color: 'grey',
         idx: 0
       },

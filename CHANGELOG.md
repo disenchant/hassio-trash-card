@@ -5,6 +5,10 @@
 * Add support for HEX color values in patterns
 * Add max_items feature for patterns
 
+### Bug Fixes
+
+* Only show events that match a pattern (prevents non-trash events from appearing)
+
 ## [1.2.2](https://github.com/idaho/hassio-trash-card/compare/1.2.1...1.2.2) (2023-12-15)
 
 

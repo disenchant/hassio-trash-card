@@ -24,7 +24,7 @@ describe('eventToItem', () => {
     expect(result).toHaveLength(1);
     expect(result[0].type).toBe('others');
     expect(result[0].label).toBe('Aoi Matsuri');
-    expect(result[0].icon).toBe('mdi:dump-truck');
+    expect(result[0].icon).toBe('mdi:calendar');
   });
 
   test('uses defined others pattern when no other pattern matches', () => {
