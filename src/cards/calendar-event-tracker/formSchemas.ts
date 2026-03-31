@@ -4,7 +4,14 @@ import type { LocalizeFunc } from '../../utils/ha';
 import type { CalendarEventTrackerConfig } from './calendar-event-tracker-config';
 import type { HaFormSchema } from '../../utils/form/ha-form';
 
-const getPatternOthersSchema = (localize: LocalizeFunc, customLocalize?: LocalizeFunc) => [
+const getPatternSchema = (customLocalize: LocalizeFunc, localize: LocalizeFunc) => [
+  {
+    label: customLocalize(`editor.card.event.pattern.fields.label`),
+    name: 'label',
+    selector: {
+      text: {}
+    }
+  },
   {
     name: 'icon',
     label: localize(`ui.panel.lovelace.editor.card.generic.icon`),
@@ -18,31 +25,6 @@ const getPatternOthersSchema = (localize: LocalizeFunc, customLocalize?: Localiz
     label: localize(`ui.panel.lovelace.editor.card.tile.color`),
     selector: { ui_color: {}}
   },
-  ...customLocalize ?
-    [{
-      label: customLocalize(`editor.card.event.pattern.fields.max_items`),
-      name: 'max_items',
-      selector: {
-        number: {
-          min: 1,
-          max: 100,
-          step: 1,
-          mode: 'box'
-        }
-      }
-    }] as HaFormSchema[] :
-    []
-];
-
-const getPatternSchema = (customLocalize: LocalizeFunc, localize: LocalizeFunc) => [
-  {
-    label: customLocalize(`editor.card.event.pattern.fields.label`),
-    name: 'label',
-    selector: {
-      text: {}
-    }
-  },
-  ...getPatternOthersSchema(localize, customLocalize),
   {
     label: customLocalize(`editor.card.event.pattern.fields.pattern`),
     name: 'pattern',
@@ -67,31 +49,35 @@ const getPatternSchema = (customLocalize: LocalizeFunc, localize: LocalizeFunc) 
     },
     context: { icon_entity: 'entity' }
   },
-  {
-    label: customLocalize(`editor.card.event.pattern.fields.max_items`),
-    name: 'max_items',
-    selector: {
-      number: {
-        min: 1,
-        max: 100,
-        step: 1,
-        mode: 'box'
+  ...customLocalize ?
+    [{
+      label: customLocalize(`editor.card.event.pattern.fields.max_items`),
+      name: 'max_items',
+      selector: {
+        number: {
+          min: 1,
+          max: 100,
+          step: 1,
+          mode: 'box'
+        }
       }
-    }
-  },
-  {
-    label: customLocalize(`editor.card.event.pattern.fields.task_interval`),
-    helper: customLocalize(`editor.card.event.pattern.fields.task_interval_description`),
-    name: 'task_interval',
-    selector: {
-      number: {
-        min: 0,
-        max: 365,
-        step: 1,
-        mode: 'box'
+    }] as HaFormSchema[] :
+    [],
+  ...customLocalize ?
+    [{
+      label: customLocalize(`editor.card.event.pattern.fields.task_interval`),
+      helper: customLocalize(`editor.card.event.pattern.fields.task_interval_description`),
+      name: 'task_interval',
+      selector: {
+        number: {
+          min: 0,
+          max: 365,
+          step: 1,
+          mode: 'box'
+        }
       }
-    }
-  }
+    }] as HaFormSchema[] :
+    []
 ];
 
 const getSchema = (customLocalize: LocalizeFunc, currentValues: CalendarEventTrackerConfig, localize: LocalizeFunc) => {
@@ -400,6 +386,5 @@ const getSchema = (customLocalize: LocalizeFunc, currentValues: CalendarEventTra
 
 export {
   getSchema,
-  getPatternSchema,
-  getPatternOthersSchema
+  getPatternSchema
 };

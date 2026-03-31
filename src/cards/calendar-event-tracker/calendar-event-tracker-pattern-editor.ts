@@ -94,10 +94,7 @@ class CalendarEventTrackerPatternEditor extends LitElement {
 
             <div class="special-row">
               <div>
-                <span> ${
-
-  // @ts-expect-error 2345
-  settingsConfig.label ?? customLocalize(`editor.card.event.pattern.type.${settingsConfig.type}`)}</span>
+                <span> ${settingsConfig.label || settingsConfig.pattern || customLocalize('editor.card.event.pattern.new_custom_label')}</span>
               </div>
             </div>
 
@@ -113,7 +110,6 @@ class CalendarEventTrackerPatternEditor extends LitElement {
               .label=${customLocalize('editor.card.event.pattern.delete')}
               class="delete-icon"
               .index=${index}
-              .disabled=${settingsConfig.type !== 'custom'}
               @click=${this.deleteItem}
               >
               <ha-icon icon="mdi:close"></ha-icon>

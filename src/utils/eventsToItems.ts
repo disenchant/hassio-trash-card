@@ -24,8 +24,7 @@ const getLabel = (event: CalendarEvent, settings: ItemSettings, useSummary: bool
 const getData = (event: CalendarEvent, pattern: Pattern & { idx: number }, useSummary: boolean): CalendarItem => ({
   ...event,
   ...pattern,
-  label: getLabel(event, pattern, useSummary),
-  type: pattern.type === 'custom' ? `custom-${pattern.idx}` : pattern.type
+  label: getLabel(event, pattern, useSummary)
 });
 
 const eventToItem = (event: CalendarEvent | undefined, { pattern, useSummary }: Options): CalendarItem[] => {
@@ -44,10 +43,10 @@ const eventToItem = (event: CalendarEvent | undefined, { pattern, useSummary }: 
     return possibleTypes.map(pat => getData(event, pat, useSummary));
   }
 
-  const othersPattern = pattern.find(pat => pat.type === 'others');
+  const fallbackPattern = pattern.find(pat => !pat.pattern);
 
-  if (othersPattern) {
-    return [ getData(event, { ...othersPattern, idx: pattern.indexOf(othersPattern) }, useSummary) ];
+  if (fallbackPattern) {
+    return [ getData(event, { ...fallbackPattern, idx: pattern.indexOf(fallbackPattern) }, useSummary) ];
   }
 
   const isTask = event.content.entity?.startsWith('todo.');
@@ -55,7 +54,6 @@ const eventToItem = (event: CalendarEvent | undefined, { pattern, useSummary }: 
     getData(
       event,
       {
-        type: 'others',
         icon: isTask ? 'mdi:crop-square' : 'mdi:calendar',
         color: 'grey',
         idx: 0

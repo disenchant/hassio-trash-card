@@ -4,17 +4,17 @@ const filterDuplicatedItems = (items: CalendarItem[]): CalendarItem[] => {
   const seenCounts = new Map<string, number>();
 
   return items.filter(item => {
-    const { type, idx, max_items } = item;
+    const { idx, max_items, pattern } = item;
     const max = max_items ?? 1;
 
     let key = '';
 
-    if (type === 'others') {
+    if (!pattern) {
       const { content } = item;
 
-      key = `others-${content.recurrence_id ?? content.summary}`;
+      key = `fallback-${content.recurrence_id ?? content.summary}`;
     } else {
-      key = `${type}-${idx}`;
+      key = `pattern-${idx}`;
     }
 
     const currentCount = seenCounts.get(key) ?? 0;

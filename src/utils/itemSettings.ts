@@ -4,9 +4,9 @@ interface ItemSettings {
   pattern?: string;
   pattern_exact?: boolean;
   icon?: string;
-  type: 'custom' | 'type1' | 'type2' | 'type3' | 'type4' | 'others';
   picutre?: string;
   max_items?: number;
+  task_interval?: number;
 }
 
 export type {

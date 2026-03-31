@@ -7,7 +7,7 @@ import { CALENDAR_EVENT_TRACKER_EDITOR_NAME } from './const';
 import { css, html, LitElement, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { entityCardConfigStruct } from './calendar-event-tracker-config';
-import { getPatternOthersSchema, getPatternSchema, getSchema } from './formSchemas';
+import { getPatternSchema, getSchema } from './formSchemas';
 import { fireEvent } from '../../utils/fireEvent';
 
 import './calendar-event-tracker-pattern-editor';
@@ -133,9 +133,7 @@ class CalendarEventTrackerEditor extends LitElement {
     const customLocalize = setupCustomlocalize(this.hass);
 
     if (this.subElementEditorConfig) {
-      const patternSchema = this.subElementEditorConfig.elementConfig?.type === 'others' ?
-        getPatternOthersSchema(this.hass.localize, customLocalize) :
-        getPatternSchema(customLocalize, this.hass.localize);
+      const patternSchema = getPatternSchema(customLocalize, this.hass.localize);
 
       return html`
         <div class="header" id="calendar-event-tracker-pattern-editor">
@@ -223,16 +221,12 @@ class CalendarEventTrackerEditor extends LitElement {
       ]
     };
 
-    const newIdx = config.
-      pattern.
-      filter(pat => pat.type === 'custom').
-      length + 1;
+    const newIdx = config.pattern.length + 1;
 
     config.pattern.push({
       label: `${customLocalize('editor.card.event.pattern.new_custom_label')} ${newIdx}`,
       icon: 'mdi:calendar',
-      color: 'pink',
-      type: 'custom'
+      color: 'pink'
     });
 
     fireEvent(this, 'config-changed', { config });

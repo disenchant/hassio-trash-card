@@ -28,8 +28,7 @@ const isMatchingAnyPatterns = (item: CalendarEvent, config: Config) => {
     return true;
   }
 
-  const eventTypes = config.pattern.filter(pat => pat.type !== 'others');
-  const patterns = eventTypes.filter(pattern => pattern.pattern !== undefined);
+  const patterns = config.pattern.filter(pattern => pattern.pattern !== undefined);
 
   return patterns.length === 0 || patterns.some(pat => filterEventByPatterns(pat, item));
 };
