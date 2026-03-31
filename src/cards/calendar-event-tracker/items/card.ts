@@ -81,6 +81,11 @@ class ItemCard extends BaseItemElement {
           justify-content: space-between;
         }
 
+        ha-card.today {
+          border: 2px solid var(--primary-text-color);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
         .background {
           position: absolute;
           top: 0;

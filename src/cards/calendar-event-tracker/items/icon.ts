@@ -74,6 +74,10 @@ class IconCard extends BaseItemElement<{ nextEvent: boolean }> {
         ha-card {
           display: grid;
         }
+        ha-card.today .badge {
+          border: 2px solid var(--primary-text-color);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
         .content {
           justify-content: space-around;
           display: flex;
