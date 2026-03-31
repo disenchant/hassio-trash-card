@@ -118,6 +118,11 @@ const getSchema = (customLocalize: LocalizeFunc, currentValues: CalendarEventTra
           selector: { boolean: {}}
         },
         {
+          name: 'highlight_overdue',
+          label: customLocalize(`editor.card.generic.highlight_overdue`),
+          selector: { boolean: {}}
+        },
+        {
           name: 'drop_todayevents_from',
           label: customLocalize(`editor.card.generic.drop_todayevents_from`),
           default: {

@@ -70,6 +70,7 @@
                 "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Markeer activiteiten van vandaag",
+                "highlight_overdue": "Highlight overdue tasks",
                 "drop_todayevents_from": "From what time to hide today's events",
                 "full_size": "Kaart zonder marge",
                 "use_summary": "Gebruik de samenvatting van de kalenderactiviteit i.p.v. de label",

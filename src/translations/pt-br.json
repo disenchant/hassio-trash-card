@@ -60,6 +60,7 @@
         "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Destacar eventos de hoje",
+                "highlight_overdue": "Highlight overdue tasks",
         "event_grouping": "Exibir apenas o próximo evento por padrão",
         "fill_container": "Encha o contêiner",
         "hide_time_range": "Ocultar tempo",

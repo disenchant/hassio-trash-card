@@ -30,11 +30,15 @@ class ItemCard extends BaseItemElement {
     const content = getDateString(item, hide_time_range ?? false, day_style, day_style_format, this.hass);
 
     const daysTillToday = Math.abs(daysTill(new Date(), date.start));
+    const daysDiff = daysTill(new Date(), date.start);
+    const isTask = item.content.entity?.startsWith('todo.');
+    const isOverdue = !!(isTask && daysDiff < 0 && (this.config.highlight_overdue ?? true));
 
     const cssClasses = {
-      today: daysTillToday === 0 && (highlight_today ?? true),
-      tomorrow: daysTillToday === 1,
-      another: daysTillToday > 1
+      today: daysTillToday === 0 && (highlight_today ?? true) && !isOverdue,
+      tomorrow: daysTillToday === 1 && !isOverdue,
+      another: daysTillToday > 1 && !isOverdue,
+      overdue: isOverdue
     };
 
     const pictureUrl = this.getPictureUrl();
@@ -84,6 +88,29 @@ class ItemCard extends BaseItemElement {
         ha-card.today {
           border: 2px solid var(--primary-text-color);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        ha-card.overdue {
+          border: 2px solid var(--error-color, #db4437);
+          box-shadow: 0 0 10px rgba(219, 68, 55, 0.4);
+          animation: pulse 2s infinite;
+        }
+
+        ha-card.overdue ha-tile-info {
+          font-weight: bold;
+          color: var(--error-color, #db4437);
+        }
+
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(219, 68, 55, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(219, 68, 55, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(219, 68, 55, 0);
+          }
         }
 
         .background {

@@ -70,6 +70,7 @@
                 "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Heutige Ereignisse hervorheben",
+                "highlight_overdue": "Highlight overdue tasks",
                 "drop_todayevents_from": "From what time to hide today's events",
                 "full_size": "Karte ohne Seitenrand",
                 "use_summary": "Ereignisbezeichnung anstelle des Lables verwenden",

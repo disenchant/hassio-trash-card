@@ -60,6 +60,7 @@
                 "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Fremhev dagens hendelser",
+                "highlight_overdue": "Highlight overdue tasks",
                 "drop_todayevents_from": "From what time to hide today's events",
                 "full_size": "Kort uten marg",
                 "use_summary": "Begivenhedssammendrag i stedet for etikett",

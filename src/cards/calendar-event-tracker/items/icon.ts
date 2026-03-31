@@ -27,12 +27,16 @@ class IconCard extends BaseItemElement<{ nextEvent: boolean }> {
     };
 
     const daysTillToday = Math.abs(daysTill(new Date(), item.date.start));
-    const { highlight_today } = this.config;
+    const daysDiff = daysTill(new Date(), item.date.start);
+    const { highlight_today, highlight_overdue } = this.config;
+    const isTask = item.content?.entity?.startsWith('todo.');
+    const isOverdue = !!(isTask && daysDiff < 0 && (highlight_overdue ?? true));
 
     const cssClasses = {
-      today: daysTillToday === 0 && (highlight_today ?? true),
-      tomorrow: daysTillToday === 1,
-      another: daysTillToday > 1,
+      today: daysTillToday === 0 && (highlight_today ?? true) && !isOverdue,
+      tomorrow: daysTillToday === 1 && !isOverdue,
+      another: daysTillToday > 1 && !isOverdue,
+      overdue: isOverdue,
       nextEvent: this.item.nextEvent,
       futureEvent: !this.item.nextEvent
     };
@@ -41,7 +45,6 @@ class IconCard extends BaseItemElement<{ nextEvent: boolean }> {
 
     this.withBackground = true;
 
-    const isTask = item.content?.entity?.startsWith('todo.');
     const cardStyle = {
       ...style,
       cursor: isTask ? 'pointer' : 'default'
@@ -78,6 +81,13 @@ class IconCard extends BaseItemElement<{ nextEvent: boolean }> {
         ha-card.today .badge {
           border: 2px solid var(--primary-text-color);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        ha-card.overdue .badge {
+          border: 2px solid var(--error-color, #db4437);
+          background-color: var(--error-color, #db4437);
+          color: white;
+          box-shadow: 0 0 10px rgba(219, 68, 55, 0.4);
+          animation: pulse 2s infinite;
         }
         .content {
           justify-content: space-around;

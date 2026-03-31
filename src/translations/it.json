@@ -74,6 +74,7 @@
         "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Evidenzia eventi di oggi",
+                "highlight_overdue": "Highlight overdue tasks",
         "drop_todayevents_from": "From what time to hide today's events",
         "full_size": "Card senza margini",
         "use_summary": "Usa l'oggetto dell'evento al posto dell'etichetta",

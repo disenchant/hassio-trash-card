@@ -18,7 +18,7 @@ class ItemChip extends BaseItemElement {
     // eslint-disable-next-line prefer-destructuring
     const item = this.item;
 
-    const { color_mode, hide_time_range, day_style, day_style_format, with_label, highlight_today } = this.config;
+    const { color_mode, hide_time_range, day_style, day_style_format, with_label, highlight_today, highlight_overdue } = this.config;
 
     const style = {
       ...getColoredStyle(color_mode, item, this.parentElement, this.hass.themes.darkMode)
@@ -27,11 +27,15 @@ class ItemChip extends BaseItemElement {
     const content = getDateString(item, hide_time_range ?? false, day_style, day_style_format, this.hass);
 
     const daysTillToday = Math.abs(daysTill(new Date(), item.date.start));
+    const daysDiff = daysTill(new Date(), item.date.start);
+    const isTask = item.content?.entity?.startsWith('todo.');
+    const isOverdue = !!(isTask && daysDiff < 0 && (highlight_overdue ?? true));
 
     const cssClasses = {
-      today: daysTillToday === 0 && (highlight_today ?? true),
-      tomorrow: daysTillToday === 1,
-      another: daysTillToday > 1
+      today: daysTillToday === 0 && (highlight_today ?? true) && !isOverdue,
+      tomorrow: daysTillToday === 1 && !isOverdue,
+      another: daysTillToday > 1 && !isOverdue,
+      overdue: isOverdue
     };
 
     const pictureUrl = this.getPictureUrl();
@@ -43,7 +47,6 @@ class ItemChip extends BaseItemElement {
       show_name: true
     };
 
-    const isTask = item.content?.entity?.startsWith('todo.');
     const chipStyle = {
       ...style,
       cursor: isTask ? 'pointer' : 'default'
@@ -84,6 +87,26 @@ class ItemChip extends BaseItemElement {
           --ha-badge-border-width: 2px;
           border: 2px solid var(--primary-text-color);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        ha-badge.overdue {
+          --ha-badge-border-color: var(--error-color, #db4437);
+          --ha-badge-border-width: 2px;
+          border: 2px solid var(--error-color, #db4437);
+          box-shadow: 0 0 10px rgba(219, 68, 55, 0.4);
+          animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(219, 68, 55, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(219, 68, 55, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(219, 68, 55, 0);
+          }
         }
       `
     ];
