@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Interval posodabljanja",
                 "helper": "Preverite spremembe v koledarju vsakih x minut"
+            },
+            "location": {
+                "title": "Lokacija",
+                "helper": "Filtriraj dogodke po podani lokaciji."
+            },
+            "only_all_day_events": {
+                "title": "Samo celodnevni dogodki",
+                "helper": "Aktivirajte to možnost, če želite uporabljati samo celodnevne vnose."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Ikona",
                         "pattern": "Vzorec zaznavanja",
                         "picture_url": "URL slike",
-                        "picture_url_description": "Če je uporabljen URL slike, se namesto ikone prikaže ustrezna slika. Postavite sliko v mapo '/config/www' in uporabite '/local/[ime_datoteke]'."
+                        "picture_url_description": "Če je uporabljen URL slike, se namesto ikone prikaže ustrezna slika. Postavite sliko v mapo '/config/www' in uporabite '/local/[ime_datoteke]'.",
+                        "pattern_exact": "Uporabi natančen vzorec",
+                        "pattern_exact_description": "Uporabi vzorec kot iskalni pojem, ki mora biti 100% enak opisu. Ne razlikuje med velikimi in malimi črkami.",
+                        "max_items": "Največje število elementov",
+                        "max_items_description": "Največje število prihajajočih dogodkov za ta vzorec (privzeto je 1).",
+                        "task_interval": "Interval opravila",
+                        "task_interval_description": "Dnevi po zaključku, ko se mora to opravilo ponoviti (0 za onemogočanje)."
                     }
                 }
             }
@@ -125,7 +139,15 @@
             "daysleft": "čez <DAYS> dan",
             "daysleft_more": "čez <DAYS> dni",
             "daysleft_from_till": "čez <DAYS> dan\nmed <START> in <END>",
-            "daysleft_more_from_till": "čez <DAYS> dni\nmed <START> in <END>"
+            "daysleft_more_from_till": "čez <DAYS> dni\nmed <START> in <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "zapade čez <DAYS> dan\nob <END>",
+            "daysleftdue_more_till": "zapade čez <DAYS> dni\nob <END>"
         }
     }
 }

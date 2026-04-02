@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Interwał aktualizacji",
                 "helper": "Sprawdzanie zmian w kalendarzu co x minut."
+            },
+            "location": {
+                "title": "Lokalizacja",
+                "helper": "Filtruj wydarzenia według podanej lokalizacji."
+            },
+            "only_all_day_events": {
+                "title": "Tylko wydarzenia całodniowe",
+                "helper": "Włącz tę opcję, jeśli chcesz używać tylko wpisów całodniowych."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Ikona",
                         "pattern": "Szablon wzorca",
                         "picture_url": "Adres URL obrazka",
-                        "picture_url_description": "Jeśli podano adres URL obrazu, odpowiedni obraz jest wyświetlany zamiast ikony. Umieść obrazek w folderze `/config/www` i użyj `/local/[nazwa_pliku]`."
+                        "picture_url_description": "Jeśli podano adres URL obrazu, odpowiedni obraz jest wyświetlany zamiast ikony. Umieść obrazek w folderze `/config/www` i użyj `/local/[nazwa_pliku]`.",
+                        "pattern_exact": "Użyj dokładnego wzorca",
+                        "pattern_exact_description": "Użyj wzorca jako wyszukiwanego terminu, który musi być w 100% identyczny z opisem. Wielkość liter nie ma znaczenia.",
+                        "max_items": "Maksymalna liczba elementów",
+                        "max_items_description": "Maksymalna liczba nadchodzących wydarzeń do wyświetlenia dla tego wzorca (domyślnie 1).",
+                        "task_interval": "Interwał zadania",
+                        "task_interval_description": "Liczba dni po zakończeniu, po których zadanie powinno zostać powtórzone (0, aby wyłączyć)."
                     }
                 }
             }
@@ -125,7 +139,15 @@
             "daysleft": "za <DAYS> dzień",
             "daysleft_more": "za <DAYS> dni",
             "daysleft_from_till": "za <DAYS> dni\npomiędzy <START> a <END>",
-            "daysleft_more_from_till": "za <DAYS> dni\npomiędzy <START> a <END>"
+            "daysleft_more_from_till": "za <DAYS> dni\npomiędzy <START> a <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "termin za <DAYS> dzień\no <END>",
+            "daysleftdue_more_till": "termin za <DAYS> dni\no <END>"
         }
     }
 }

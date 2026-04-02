@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Atjaunināšanas intervāls",
                 "helper": "Pārbaudīt izmaiņas kalendārā ik pēc x minūtēm"
+            },
+            "location": {
+                "title": "Atrašanās vieta",
+                "helper": "Filtrēt notikumus pēc norādītās atrašanās vietas."
+            },
+            "only_all_day_events": {
+                "title": "Tikai visas dienas notikumi",
+                "helper": "Aktivizējiet šo opciju, ja vēlaties izmantot tikai visas dienas ierakstus."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Ikona",
                         "pattern": "Notikuma filtrs",
                         "picture_url": "Attēla URL",
-                        "picture_url_description": "Ja ir norādīts attēla URL, ikonas vietā tiek parādīts atbilstošais attēls. Ievietojiet attēlu mapē `/config/www` un izmantojiet `/local/[faila nosaukums]`."
+                        "picture_url_description": "Ja ir norādīts attēla URL, ikonas vietā tiek parādīts atbilstošais attēls. Ievietojiet attēlu mapē `/config/www` un izmantojiet `/local/[faila nosaukums]`.",
+                        "pattern_exact": "Izmantot precīzu paraugu",
+                        "pattern_exact_description": "Izmantot paraugu kā meklēšanas terminu, kuram jābūt 100% identiskam ar aprakstu. Reģistrnejutīgs.",
+                        "max_items": "Maksimālais vienumu skaits",
+                        "max_items_description": "Maksimālais gaidāmo notikumu skaits, ko rādīt šim paraugam (noklusējums ir 1).",
+                        "task_interval": "Uzdevuma intervāls",
+                        "task_interval_description": "Dienas pēc pabeigšanas, kad šim uzdevumam būtu jāatkārtojas (0, lai atspējotu)."
                     }
                 }
             }
@@ -125,7 +139,15 @@
             "daysleft": "pēc <DAYS> dienas",
             "daysleft_more": "pēc <DAYS> dienām",
             "daysleft_from_till": "pēc <DAYS> dienas\nno <START> līdz <END>",
-            "daysleft_more_from_till": "pēc <DAYS> dienām\nno <START> līdz <END>"
+            "daysleft_more_from_till": "pēc <DAYS> dienām\nno <START> līdz <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "termiņš pēc <DAYS> dienas\nplkst. <END>",
+            "daysleftdue_more_till": "termiņš pēc <DAYS> dienām\nplkst. <END>"
         }
     }
 }

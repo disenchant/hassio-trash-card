@@ -60,12 +60,12 @@
                 "helper": "Zkontrolivat změny v kalendáři každých x minut"
             },
             "location": {
-                "title": "Poloha",
-                "helper": "Filtrovat události podle daného umístění, pokud není zadána žádná, použijí se všechny."
+                "title": "Lokalita",
+                "helper": "Filtrovat události podle zadané lokality."
             },
             "only_all_day_events": {
                 "title": "Pouze celodenní události",
-                "helper": "Pokud chcete používat pouze celodenní záznamy, aktivujte tuto možnost, jinak budou použity všechny záznamy."
+                "helper": "Aktivujte tuto možnost, pokud chcete používat pouze celodenní záznamy."
             }
         },
         "card": {
@@ -108,9 +108,13 @@
                         "icon": "Ikona",
                         "pattern": "Vzor",
                         "pattern_exact": "Použít přesný vzor",
-                        "pattern_exact_description": "Jako hledaný výraz použijte vzor, ​​který musí být 100% shodný s popisem události v kalendáři. Hledaný výraz nerozlišuje malá a velká písmena.",
+                        "pattern_exact_description": "Použít vzor jako hledaný výraz, který musí být 100% shodný s popisem. Nerozlišuje velikost písmen.",
                         "picture_url": "URL obrázku",
-                        "picture_url_description": "Pokud je zadána adresa URL obrázku, zobrazí se místo ikony odpovídající obrázek. Umístěte obrázek do složky `/config/www` a použijte `/local/[název souboru]`."
+                        "picture_url_description": "Pokud je zadána adresa URL obrázku, zobrazí se místo ikony odpovídající obrázek. Umístěte obrázek do složky `/config/www` a použijte `/local/[název souboru]`.",
+                        "max_items": "Maximální počet položek",
+                        "max_items_description": "Maximální počet nadcházejících událostí, které se mají zobrazit pro tento vzor (výchozí je 1).",
+                        "task_interval": "Interval úkolu",
+                        "task_interval_description": "Počet dní po dokončení, kdy se má tento úkol znovu vytvořit (0 pro zakázání)."
                     }
                 }
             }
@@ -134,7 +138,15 @@
             "daysleft": "za <DAYS> den",
             "daysleft_more": "za <DAYS> dní",
             "daysleft_from_till": "za <DAYS> den\nmezi <START> a <END>",
-            "daysleft_more_from_till": "za <DAYS> dní\nmezi <START> a <END>"
+            "daysleft_more_from_till": "za <DAYS> dní\nmezi <START> a <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "splatné za <DAYS> dny\nv <END>",
+            "daysleftdue_more_till": "splatné za <DAYS> dní\nv <END>"
         }
     }
 }

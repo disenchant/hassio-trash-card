@@ -11,7 +11,8 @@
                 "values": {
                     "default": "Dato",
                     "counter": "dager til",
-                    "custom": "Brukerdefineret datoformat"
+                    "custom": "Brukerdefineret datoformat",
+                    "weekday": "Day of the week"
                 }
             },
             "day_style_format": {
@@ -48,6 +49,23 @@
             "refresh_rate": {
                 "title": "Opdateringsinterval",
                 "helper": "Sjekk endringer i kalenderen hvert x minut"
+            },
+            "alignment_style": {
+                "title": "Alignment",
+                "values": {
+                    "left": "left",
+                    "center": "centered",
+                    "right": "right",
+                    "space": "spaced"
+                }
+            },
+            "location": {
+                "title": "Lokasjon",
+                "helper": "Filtrer hendelser etter gitt lokasjon."
+            },
+            "only_all_day_events": {
+                "title": "Kun heldagshendelser",
+                "helper": "Aktiver dette valget hvis du kun ønsker å bruke heldagshendelser."
             }
         },
         "card": {
@@ -90,7 +108,13 @@
                         "icon": "Ikon",
                         "pattern": "Detektions mønster",
                         "picture_url": "Link til bilde",
-                        "picture_url_description": "Hvis en URL er angitt vises det tilsvarende bilde i stedet for ikonet. Last opp bildet til `/config/www` og bruk `/local/[filnavn]`."
+                        "picture_url_description": "Hvis en URL er angitt vises det tilsvarende bilde i stedet for ikonet. Last opp bildet til `/config/www` og bruk `/local/[filnavn]`.",
+                        "pattern_exact": "Bruk nøyaktig mønster",
+                        "pattern_exact_description": "Bruk mønster som søkebegrep, som må være 100% identisk med beskrivelsen. Ikke versalsensitiv.",
+                        "max_items": "Maksimalt antall elementer",
+                        "max_items_description": "Maksimalt antall kommende hendelser for dette mønsteret (standard er 1).",
+                        "task_interval": "Oppgaveintervall",
+                        "task_interval_description": "Dager etter ferdigstillelse når denne oppgaven skal gjentas (0 for å deaktivere)."
                     }
                 }
             }
@@ -115,7 +139,15 @@
             "daysleft": "om <DAYS> dager",
             "daysleft_more": "om <DAYS> dager",
             "daysleft_from_till": "om <DAYS> dag\n <START> - <END>",
-            "daysleft_more_from_till": "om <DAYS> dage\n <START> - <END>"
+            "daysleft_more_from_till": "om <DAYS> dage\n <START> - <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "forfaller om <DAYS> dag\nkl. <END>",
+            "daysleftdue_more_till": "forfaller om <DAYS> dager\nkl. <END>"
         }
     }
 }

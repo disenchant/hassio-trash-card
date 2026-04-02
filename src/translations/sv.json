@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Uppdateringsintervall",
                 "helper": "Kolla ändringar i kalendern var x minut"
+            },
+            "location": {
+                "title": "Plats",
+                "helper": "Filtrera händelser efter angiven plats."
+            },
+            "only_all_day_events": {
+                "title": "Endast heldagshändelser",
+                "helper": "Aktivera detta alternativ om du endast vill använda heldagsinlägg."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Ikon",
                         "pattern": "Detektions mönster",
                         "picture_url": "Bild-URL",
-                        "picture_url_description": "Om en bild-URL är angivet, visas det bilden istället för ikonen. Placera en bild i mappen `/config/www` och använd `/local/[filnamn]`."
+                        "picture_url_description": "Om en bild-URL är angivet, visas det bilden istället för ikonen. Placera en bild i mappen `/config/www` och använd `/local/[filnamn]`.",
+                        "pattern_exact": "Använd exakt mönster",
+                        "pattern_exact_description": "Använd mönster som sökterm, som måste vara 100% identisk med beskrivningen. Ej skiftlägeskänslig.",
+                        "max_items": "Maximalt antal objekt",
+                        "max_items_description": "Maximalt antal kommande händelser som ska visas för detta mönster (standard är 1).",
+                        "task_interval": "Uppgiftsintervall",
+                        "task_interval_description": "Dagar efter slutförande när denna uppgift ska återkomma (0 för att inaktivera)."
                     }
                 }
             }
@@ -132,7 +146,8 @@
             "daysleftend_more_till": "slutar om <DAYS> dagar\nkl <END>",
             "daysleftdue": "förfaller om <DAYS> dag",
             "daysleftdue_more": "förfaller om <DAYS> dagar",
-            "daysleftdue_till": "due in <DAYS> day\nat <END>",
-            "daysleftdue_more_till": "due in <DAYS> days\nat <END>"        }
+            "daysleftdue_till": "förfaller om <DAYS> dag\nkl. <END>",
+            "daysleftdue_more_till": "förfaller om <DAYS> dagar\nkl. <END>"
+        }
     }
 }

@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Opdateringsinterval",
                 "helper": "Tjek ændringer i kalenderen hvert x minut"
+            },
+            "location": {
+                "title": "Lokation",
+                "helper": "Filtrer begivenheder efter angivet lokation."
+            },
+            "only_all_day_events": {
+                "title": "Kun heldagsbegivenheder",
+                "helper": "Aktiver denne mulighed, hvis du kun vil bruge heldagsbegivenheder."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Ikon",
                         "pattern": "Detektions mønster",
                         "picture_url": "Billede-URL",
-                        "picture_url_description": "Hvis en billed-URL er angivet, vises det tilsvarende billede i stedet for ikonet. Placer et billede i mappen `/config/www` og brug `/local/[filnavn]`."
+                        "picture_url_description": "Hvis en billed-URL er angivet, vises det tilsvarende billede i stedet for ikonet. Placer et billede i mappen `/config/www` og brug `/local/[filnavn]`.",
+                        "pattern_exact": "Brug præcis mønster",
+                        "pattern_exact_description": "Brug mønster som søgeterm, der skal være 100% identisk med beskrivelsen. Ikke versalfølsom.",
+                        "max_items": "Maksimalt antal elementer",
+                        "max_items_description": "Maksimalt antal kommende begivenheder for dette mønster (standard er 1).",
+                        "task_interval": "Opgaveinterval",
+                        "task_interval_description": "Dage efter færdiggørelse, hvor denne opgave skal gentages (0 for at deaktivere)."
                     }
                 }
             }
@@ -132,8 +146,8 @@
             "daysleftend_more_till": "slutter om <DAYS> dage\nkl <END>",
             "daysleftdue": "forfalder om <DAYS> dag",
             "daysleftdue_more": "forfalder om <DAYS> dage",
-            "daysleftdue_till": "due in <DAYS> day\nat <END>",
-            "daysleftdue_more_till": "due in <DAYS> days\nat <END>"
+            "daysleftdue_till": "forfalder om <DAYS> dag\nkl. <END>",
+            "daysleftdue_more_till": "forfalder om <DAYS> dage\nkl. <END>"
         }
     }
 }

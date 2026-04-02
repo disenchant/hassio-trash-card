@@ -17,7 +17,7 @@
             },
             "day_style_format": {
                 "title": "Aangepast datumformaat",
-                "helper":"Definieer je eigen datumnotatie. (dd = dag met voorloop 0, d = dag, MM = maand met voorloop 0, M = maand, yy = jaar kort, yyyy = jaar lang) Bijv. dd.MM.yyyy = 03.04.2024, waar d.M.yy = 3.4.24 zou resulteren."
+                "helper": "Definieer je eigen datumnotatie. (dd = dag met voorloop 0, d = dag, MM = maand met voorloop 0, M = maand, yy = jaar kort, yyyy = jaar lang) Bijv. dd.MM.yyyy = 03.04.2024, waar d.M.yy = 3.4.24 zou resulteren."
             },
             "card_style": {
                 "title": "Weergeven als",
@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Verversingsinterval",
                 "helper": "Controleert elke x minuten op wijzigingen in de kalenderactiviteiten."
+            },
+            "location": {
+                "title": "Locatie",
+                "helper": "Filter activiteiten op de opgegeven locatie."
+            },
+            "only_all_day_events": {
+                "title": "Alleen dagactiviteiten",
+                "helper": "Schakel deze optie in als je alleen dagvullende activiteiten wilt gebruiken."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Icoon",
                         "pattern": "Detectiepatroon",
                         "picture_url": "Afbeeldings-URL",
-                        "picture_url_description": "Als er een afbeeldings-URL is opgegeven, wordt de bijbehorende afbeelding weergegeven in plaats van het icoon. Plaats een afbeelding in de `/config/www` map en gebruik `/local/[bestandsnaam]`."
+                        "picture_url_description": "Als er een afbeeldings-URL is opgegeven, wordt de bijbehorende afbeelding weergegeven in plaats van het icoon. Plaats een afbeelding in de `/config/www` map en gebruik `/local/[bestandsnaam]`.",
+                        "pattern_exact": "Gebruik exact patroon",
+                        "pattern_exact_description": "Gebruik patroon als zoekterm, die 100% identiek moet zijn aan de beschrijving. Niet hoofdlettergevoelig.",
+                        "max_items": "Maximaal aantal items",
+                        "max_items_description": "Maximaal aantal toekomstige activiteiten voor dit patroon (standaard is 1).",
+                        "task_interval": "Taakinterval",
+                        "task_interval_description": "Dagen na voltooiing waarna deze taak opnieuw moet worden gemaakt (0 om uit te schakelen)."
                     }
                 }
             }
@@ -125,7 +139,15 @@
             "daysleft": "over <DAYS> dag",
             "daysleft_more": "over <DAYS> dagen",
             "daysleft_from_till": "over <DAYS> dag\ntussen <START> en <END>",
-            "daysleft_more_from_till": "over <DAYS> dagen\ntussen <START> en <END>"
+            "daysleft_more_from_till": "over <DAYS> dagen\ntussen <START> en <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "vervalt over <DAYS> dag\nom <END>",
+            "daysleftdue_more_till": "vervalt over <DAYS> dagen\nom <END>"
         }
     }
 }

@@ -1,136 +1,152 @@
 {
-  "editor": {
-    "form": {
-      "color_picker": {
-        "values": {
-          "default": "Colore di default"
-        }
-      },
-      "day_style": {
-        "title": "Mostra la data degli eventi come",
-        "values": {
-          "default": "Data",
-          "counter": "giorni a",
-          "weekday": "giorno della settimana",
-          "custom": "Formato di data proprio"
-        }
-      },
-      "day_style_format": {
-        "title": "Formato di data personalizzato",
-        "helper": "Definisci il tuo formato di data personalizzato. (dd = giorno con lo 0 iniziale, d = giorno, MM = mese con lo 0 iniziale, M = mese, yy = anno breve, yyyy = anno lungo) Ad esempio dd.MM.yyyy = 03.04.2024, dove d.M.yy = 3.4.24 risulterebbe"
-      },
-      "card_style": {
-        "title": "Visualizza come",
-        "values": {
-          "card": "Carta standard",
-          "chip": "Carta chip",
-          "icon": "Icona"
-        }
-      },
-      "alignment_style": {
-          "title": "Allineamento",
-          "values": {
-              "left": "sinistra",
-              "center": "centrato",
-              "right": "diritto",
-              "space": "distanziato"
-          }
-      },
-      "color_mode": {
-        "title": "Applicare il colore a",
-        "values": {
-          "background": "Sfondo",
-          "icon": "Icona"
-        }
-      },
-      "layout_picker": {
-        "values": {
-          "default": "Layout di default",
-          "vertical": "Layout verticale",
-          "horizontal": "Layout orizzontala"
-        }
-      },
-      "tabs": {
-        "settings": "Impostazioni",
-        "appearance": "Aspetto",
-        "patterns": "Modelli"
-      },
-      "refresh_rate": {
-        "title": "Intervallo di realizzazione",
-        "helper": "Controlla le modifiche al calendario ogni x minuti."
-      },
-      "location": {
-         "title": "Posizione",
-         "helper": "Filtra gli eventi in base a una determinata posizione; se non viene indicato nulla, vengono utilizzati tutti."
-      }
-    },
-    "card": {
-      "generic": {
-        "icon_color": "Colore icona",
-        "layout": "Layout",
-        "fill_container": "Riempi il container",
-        "next_days": "Giorni nel futuro",
+    "editor": {
+        "form": {
+            "color_picker": {
+                "values": {
+                    "default": "Colore di default"
+                }
+            },
+            "day_style": {
+                "title": "Mostra la data degli eventi come",
+                "values": {
+                    "default": "Data",
+                    "counter": "giorni a",
+                    "weekday": "giorno della settimana",
+                    "custom": "Formato di data proprio"
+                }
+            },
+            "day_style_format": {
+                "title": "Formato di data personalizzato",
+                "helper": "Definisci il tuo formato di data personalizzato. (dd = giorno con lo 0 iniziale, d = giorno, MM = mese con lo 0 iniziale, M = mese, yy = anno breve, yyyy = anno lungo) Ad esempio dd.MM.yyyy = 03.04.2024, dove d.M.yy = 3.4.24 risulterebbe"
+            },
+            "card_style": {
+                "title": "Visualizza come",
+                "values": {
+                    "card": "Carta standard",
+                    "chip": "Carta chip",
+                    "icon": "Icona"
+                }
+            },
+            "alignment_style": {
+                "title": "Allineamento",
+                "values": {
+                    "left": "sinistra",
+                    "center": "centrato",
+                    "right": "diritto",
+                    "space": "distanziato"
+                }
+            },
+            "color_mode": {
+                "title": "Applicare il colore a",
+                "values": {
+                    "background": "Sfondo",
+                    "icon": "Icona"
+                }
+            },
+            "layout_picker": {
+                "values": {
+                    "default": "Layout di default",
+                    "vertical": "Layout verticale",
+                    "horizontal": "Layout orizzontala"
+                }
+            },
+            "tabs": {
+                "settings": "Impostazioni",
+                "appearance": "Aspetto",
+                "patterns": "Modelli"
+            },
+            "refresh_rate": {
+                "title": "Intervallo di realizzazione",
+                "helper": "Controlla le modifiche al calendario ogni x minuti."
+            },
+            "location": {
+                "title": "Posizione",
+                "helper": "Filtra gli eventi per la posizione specificata."
+            },
+            "only_all_day_events": {
+                "title": "Solo eventi di un'intera giornata",
+                "helper": "Attiva questa opzione se desideri utilizzare solo le voci di un'intera giornata."
+            }
+        },
+        "card": {
+            "generic": {
+                "icon_color": "Colore icona",
+                "layout": "Layout",
+                "fill_container": "Riempi il container",
+                "next_days": "Giorni nel futuro",
                 "max_items": "Numero massimo di elementi mostrati",
-        "filter_events": "Filter events by patterns",
+                "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Evidenzia eventi di oggi",
                 "highlight_overdue": "Highlight overdue tasks",
                 "show_empty": "Show empty state",
-        "drop_todayevents_from": "From what time to hide today's events",
-        "full_size": "Card senza margini",
-        "use_summary": "Usa l'oggetto dell'evento al posto dell'etichetta",
-        "hide_time_range": "nascondere il tempo",
-        "event_grouping": "Visualizza solo l'evento successivo per schema",
-        "icon_size": "Dimensione dell'icona",
-        "with_label": "Mostra etichetta"
-      },
-      "event": {
-        "pattern": {
-          "title": "Modifica del modello",
-          "edit": "modificare",
-          "delete": "cancellare",
-          "create": "Crea un nuovo modello",
-          "new_custom_label": "Nuovo modello",
-          "type": {
-            "type1": "Type 1",
-            "type2": "Type 2",
-            "type3": "Type 3",
-            "type4": "Type 4",
-            "others": "Altro"
-          },
-          "fields": {
-            "label": "Etichetta",
-            "color": "Colore",
-            "icon": "Icona",
-            "pattern": "Pattern identificazione",
-            "pattern_exact": "Utilizza un pattern specifico",
-            "pattern_exact_description": "Utilizzare il pattern come termine di ricerca, che deve essere identico al 100% alla descrizione dell'evento del calendario. Il termine di ricerca non fa distinzione tra maiuscole e minuscole.",
-            "picture_url": "URL immagine",
-            "picture_url_description": "Se viene specificato un URL dell'immagine, al posto dell'icona viene visualizzata l'immagine corrispondente. Posizionare un'immagine nella cartella `/config/www` e utilizzare `/local/[filename]`."
-          }
+                "drop_todayevents_from": "From what time to hide today's events",
+                "full_size": "Card senza margini",
+                "use_summary": "Usa l'oggetto dell'evento al posto dell'etichetta",
+                "hide_time_range": "nascondere il tempo",
+                "event_grouping": "Visualizza solo l'evento successivo per schema",
+                "icon_size": "Dimensione dell'icona",
+                "with_label": "Mostra etichetta"
+            },
+            "event": {
+                "pattern": {
+                    "title": "Modifica del modello",
+                    "edit": "modificare",
+                    "delete": "cancellare",
+                    "create": "Crea un nuovo modello",
+                    "new_custom_label": "Nuovo modello",
+                    "type": {
+                        "type1": "Type 1",
+                        "type2": "Type 2",
+                        "type3": "Type 3",
+                        "type4": "Type 4",
+                        "others": "Altro"
+                    },
+                    "fields": {
+                        "label": "Etichetta",
+                        "color": "Colore",
+                        "icon": "Icona",
+                        "pattern": "Pattern identificazione",
+                        "pattern_exact": "Usa motivo esatto",
+                        "pattern_exact_description": "Usa il motivo come termine di ricerca, che deve essere identico al 100% alla descrizione. Case-insensitive.",
+                        "picture_url": "URL immagine",
+                        "picture_url_description": "Se viene specificato un URL dell'immagine, al posto dell'icona viene visualizzata l'immagine corrispondente. Posizionare un'immagine nella cartella `/config/www` e utilizzare `/local/[filename]`.",
+                        "max_items": "Numero massimo di elementi",
+                        "max_items_description": "Numero massimo di eventi imminenti da mostrare per questo motivo (predefinito è 1).",
+                        "task_interval": "Intervallo attività",
+                        "task_interval_description": "Giorni dopo il completamento in cui questa attività deve ripetersi (0 per disabilitare)."
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  "card": {
-    "not_found": {
-      "title": "Entità non trovata",
-      "description": "Per far funzionare CalendarEventTracker, selezionare almeno un'entità di calendario."
     },
-    "empty": {
-      "description": "Al momento non è stato trovato alcun evento. Questo messaggio è disponibile solo durante la modifica."
-    },
-    "event": {
-      "today": "Oggi",
-      "tomorrow": "Domani",
-      "day": "<DAY>",
-      "today_from_till": "Oggi\nda <START> a <END>",
-      "tomorrow_from_till": "Domani\ntra <START> e <END>",
-      "day_from_till": "<DAY>\ntra <START> e <END>",
-      "daysleft": "tra <DAYS> giorni",
-      "daysleft_more": "tra <DAYS> giorni",
-      "daysleft_from_till": "tra <DAYS> giorni\ntra <START> e <END>",
-      "daysleft_more_from_till": "tra <DAYS> giorni\ntra <START> e <END>"
+    "card": {
+        "not_found": {
+            "title": "Entità non trovata",
+            "description": "Per far funzionare CalendarEventTracker, selezionare almeno un'entità di calendario."
+        },
+        "empty": {
+            "description": "Al momento non è stato trovato alcun evento. Questo messaggio è disponibile solo durante la modifica."
+        },
+        "event": {
+            "today": "Oggi",
+            "tomorrow": "Domani",
+            "day": "<DAY>",
+            "today_from_till": "Oggi\nda <START> a <END>",
+            "tomorrow_from_till": "Domani\ntra <START> e <END>",
+            "day_from_till": "<DAY>\ntra <START> e <END>",
+            "daysleft": "tra <DAYS> giorni",
+            "daysleft_more": "tra <DAYS> giorni",
+            "daysleft_from_till": "tra <DAYS> giorni\ntra <START> e <END>",
+            "daysleft_more_from_till": "tra <DAYS> giorni\ntra <START> e <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "scade in <DAYS> giorno\nalle <END>",
+            "daysleftdue_more_till": "scade in <DAYS> giorni\nalle <END>"
+        }
     }
-  }
 }

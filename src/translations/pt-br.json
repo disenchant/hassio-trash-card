@@ -1,140 +1,152 @@
 {
-  "card": {
-    "empty": {
-      "description": "No momento, nenhum evento foi encontrado. Essa mensagem só está disponível durante a edição."
-    },
-    "event": {
-      "day": "<DAY>",
-      "today": "hoje",
-      "daysleft": "em <DAYS> dia",
-      "tomorrow": "amanhã",
-      "day_from_till": "<DAY>\nentre <START> e <END>",
-      "daysleft_more": "em <DAYS> dias",
-      "today_from_till": "Hoje\nDe <START> a <END>",
-      "daysleft_from_till": "em <DAYS> dia\nentre <START> e <END>",
-      "tomorrow_from_till": "Amanhã\nentre <START> e <END>",
-      "daysleft_more_from_till": "em <DAYS> dias\nentre <START> e <END>"
-    },
-    "not_found": {
-      "title": "Nenhuma entidade definida",
-      "description": "Selecione pelo menos uma entidade de calendário para que o CalendarEventTracker funcione."
-    }
-  },
-  "editor": {
-    "card": {
-      "event": {
-        "pattern": {
-          "edit": "editar",
-          "type": {
-            "type2": "Type 2",
-            "type4": "Type 4",
-            "others": "Outros",
-            "type1": "Type 1",
-            "type3": "Type 3"
-          },
-          "title": "Editar padrão",
-          "create": "Criar novo padrão",
-          "delete": "excluir",
-          "fields": {
-            "icon": "Ícone",
-            "color": "Cor",
-            "label": "Rótulo",
-            "pattern": "Padrão de detecção",
-            "picture_url": "URL da imagem",
-            "pattern_exact": "Use o padrão exato",
-            "picture_url_description": "Se for especificado um URL de imagem, a imagem correspondente será exibida em vez do ícone. Coloque uma imagem na pasta `/config/www` e use `/local/[filename]`.",
-            "pattern_exact_description": "Use o padrão como termo de pesquisa, que deve ser 100% idêntico à descrição do evento do calendário. O termo de pesquisa não diferencia maiúsculas de minúsculas."
-          },
-          "new_custom_label": "Novo padrão"
-        }
-      },
-      "generic": {
-        "layout": "Layout",
-        "full_size": "Cartão sem margem",
-        "icon_size": "Tamanho do ícone",
-        "next_days": "Dias no futuro",
+    "editor": {
+        "card": {
+            "event": {
+                "pattern": {
+                    "edit": "editar",
+                    "type": {
+                        "type2": "Type 2",
+                        "type4": "Type 4",
+                        "others": "Outros",
+                        "type1": "Type 1",
+                        "type3": "Type 3"
+                    },
+                    "title": "Editar padrão",
+                    "create": "Criar novo padrão",
+                    "delete": "excluir",
+                    "fields": {
+                        "icon": "Ícone",
+                        "color": "Cor",
+                        "label": "Rótulo",
+                        "pattern": "Padrão de detecção",
+                        "picture_url": "URL da imagem",
+                        "pattern_exact": "Usar padrão exato",
+                        "picture_url_description": "Se for especificado um URL de imagem, a imagem correspondente será exibida em vez do ícone. Coloque uma imagem na pasta `/config/www` e use `/local/[filename]`.",
+                        "pattern_exact_description": "Use o padrão como termo de pesquisa, que deve ser 100% idêntico à descrição. Insensível a maiúsculas e minúsculas.",
+                        "max_items": "Máximo de itens",
+                        "max_items_description": "Número máximo de próximos eventos para mostrar para este padrão (o padrão é 1).",
+                        "task_interval": "Intervalo de tarefa",
+                        "task_interval_description": "Dias após a conclusão em que esta tarefa deve ocorrer novamente (0 para desativar)."
+                    },
+                    "new_custom_label": "Novo padrão"
+                }
+            },
+            "generic": {
+                "layout": "Layout",
+                "full_size": "Cartão sem margem",
+                "icon_size": "Tamanho do ícone",
+                "next_days": "Dias no futuro",
                 "max_items": "Máx. de itens mostrados",
-        "icon_color": "Cor do ícone",
-        "with_label": "Exibir rótulo",
-        "use_summary": "Resumo do evento em vez de rótulo",
-        "filter_events": "Filter events by patterns",
+                "icon_color": "Cor do ícone",
+                "with_label": "Exibir rótulo",
+                "use_summary": "Resumo do evento em vez de rótulo",
+                "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Destacar eventos de hoje",
                 "highlight_overdue": "Highlight overdue tasks",
                 "show_empty": "Show empty state",
-        "event_grouping": "Exibir apenas o próximo evento por padrão",
-        "fill_container": "Encha o contêiner",
-        "hide_time_range": "Ocultar tempo",
-        "drop_todayevents_from": "From what time to hide today's events"
-      }
+                "event_grouping": "Exibir apenas o próximo evento por padrão",
+                "fill_container": "Encha o contêiner",
+                "hide_time_range": "Ocultar tempo",
+                "drop_todayevents_from": "From what time to hide today's events"
+            }
+        },
+        "form": {
+            "tabs": {
+                "patterns": "Padrões",
+                "settings": "Configurações",
+                "appearance": "Aparência"
+            },
+            "location": {
+                "title": "Localização",
+                "helper": "Filtrar eventos por localização informada."
+            },
+            "day_style": {
+                "title": "Mostrar a hora do evento como",
+                "values": {
+                    "custom": "Formato de data personalizado",
+                    "counter": "dias para",
+                    "default": "Data",
+                    "weekday": "Dia da semana"
+                }
+            },
+            "card_style": {
+                "title": "Exibir como",
+                "values": {
+                    "card": "Cartão padrão",
+                    "chip": "Cartão com chip",
+                    "icon": "Ícone"
+                }
+            },
+            "color_mode": {
+                "title": "Aplicar cor em",
+                "values": {
+                    "icon": "Ícone",
+                    "background": "Histórico"
+                }
+            },
+            "color_picker": {
+                "values": {
+                    "default": "Cor padrão"
+                }
+            },
+            "refresh_rate": {
+                "title": "Intervalo de atualização",
+                "helper": "Verifique se há alterações no calendário a cada x minutos"
+            },
+            "layout_picker": {
+                "values": {
+                    "default": "Layout padrão",
+                    "vertical": "Layout vertical",
+                    "horizontal": "Layout horizontal"
+                }
+            },
+            "alignment_style": {
+                "title": "Alinhamento",
+                "values": {
+                    "left": "esquerda",
+                    "right": "direito",
+                    "space": "espaçados",
+                    "center": "centralizado"
+                }
+            },
+            "day_style_format": {
+                "title": "Formato de data personalizado",
+                "helper": "Defina seu próprio formato de data. (dd = dia com 0 à esquerda, d = dia, MM = mês com 0 à esquerda, M = mês, yy = ano curto, yyyy = ano longo) Por exemplo, dd.MM.yyyy = 03.04.2024, onde d.M.yy = 3.4.24 resultaria."
+            },
+            "only_all_day_events": {
+                "title": "Apenas eventos de dia inteiro",
+                "helper": "Ative esta opção se desejar usar apenas entradas de dia inteiro."
+            }
+        }
     },
-    "form": {
-      "tabs": {
-        "patterns": "Padrões",
-        "settings": "Configurações",
-        "appearance": "Aparência"
-      },
-      "location": {
-        "title": "Localização",
-        "helper": "Filtra eventos por local determinado; se nenhum for fornecido, todos serão usados."
-      },
-      "day_style": {
-        "title": "Mostrar a hora do evento como",
-        "values": {
-          "custom": "Formato de data personalizado",
-          "counter": "dias para",
-          "default": "Data",
-          "weekday": "Dia da semana"
+    "card": {
+        "empty": {
+            "description": "No momento, nenhum evento foi encontrado. Essa mensagem só está disponível durante a edição."
+        },
+        "event": {
+            "day": "<DAY>",
+            "today": "hoje",
+            "daysleft": "em <DAYS> dia",
+            "tomorrow": "amanhã",
+            "day_from_till": "<DAY>\nentre <START> e <END>",
+            "daysleft_more": "em <DAYS> dias",
+            "today_from_till": "Hoje\nDe <START> a <END>",
+            "daysleft_from_till": "em <DAYS> dia\nentre <START> e <END>",
+            "tomorrow_from_till": "Amanhã\nentre <START> e <END>",
+            "daysleft_more_from_till": "em <DAYS> dias\nentre <START> e <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "vence em <DAYS> dia\nàs <END>",
+            "daysleftdue_more_till": "vence em <DAYS> dias\nàs <END>"
+        },
+        "not_found": {
+            "title": "Nenhuma entidade definida",
+            "description": "Selecione pelo menos uma entidade de calendário para que o CalendarEventTracker funcione."
         }
-      },
-      "card_style": {
-        "title": "Exibir como",
-        "values": {
-          "card": "Cartão padrão",
-          "chip": "Cartão com chip",
-          "icon": "Ícone"
-        }
-      },
-      "color_mode": {
-        "title": "Aplicar cor em",
-        "values": {
-          "icon": "Ícone",
-          "background": "Histórico"
-        }
-      },
-      "color_picker": {
-        "values": {
-          "default": "Cor padrão"
-        }
-      },
-      "refresh_rate": {
-        "title": "Intervalo de atualização",
-        "helper": "Verifique se há alterações no calendário a cada x minutos"
-      },
-      "layout_picker": {
-        "values": {
-          "default": "Layout padrão",
-          "vertical": "Layout vertical",
-          "horizontal": "Layout horizontal"
-        }
-      },
-      "alignment_style": {
-        "title": "Alinhamento",
-        "values": {
-          "left": "esquerda",
-          "right": "direito",
-          "space": "espaçados",
-          "center": "centralizado"
-        }
-      },
-      "day_style_format": {
-        "title": "Formato de data personalizado",
-        "helper": "Defina seu próprio formato de data. (dd = dia com 0 à esquerda, d = dia, MM = mês com 0 à esquerda, M = mês, yy = ano curto, yyyy = ano longo) Por exemplo, dd.MM.yyyy = 03.04.2024, onde d.M.yy = 3.4.24 resultaria."
-      },
-      "only_all_day_events": {
-        "title": "Somente eventos durante todo o dia",
-        "helper": "Se você quiser usar apenas entradas para o dia inteiro, ative essa opção; caso contrário, todas as entradas serão usadas."
-      }
     }
-  }
 }

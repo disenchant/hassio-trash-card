@@ -12,7 +12,7 @@
                     "default": "Date",
                     "counter": "Jours jusqu'à",
                     "weekday": "Jour de la semaine",
-                    "custom" : "Propre format de date"
+                    "custom": "Propre format de date"
                 }
             },
             "day_style_format": {
@@ -60,13 +60,13 @@
                 "helper": "Vérifier les changements dans le calendrier toutes les x minutes."
             },
             "location": {
-                "title": "Lieu",
-                "helper": "Filtrer les événements par lieu. Laisser blanc pour voir tous les lieux."
+                "title": "Emplacement",
+                "helper": "Filtrer les événements par emplacement. Si rien n'est indiqué, tous sont utilisés."
             },
             "only_all_day_events": {
-                "title": "Toute la journée",
-                "helper": "Limiter aux évenements 'Toute la journée'. Si désactivé tous les évévemlents seront utilisés."
-            }            
+                "title": "Événements sur toute la journée uniquement",
+                "helper": "Activez cette option si vous ne souhaitez utiliser que les entrées sur toute la journée."
+            }
         },
         "card": {
             "generic": {
@@ -107,10 +107,14 @@
                         "color": "Couleur",
                         "icon": "Icône",
                         "pattern": "Terme de recherche",
-                        "pattern_exact": "Motif exact",
-                        "pattern_exact_description": "La description de l'événement du calendrier doit être 100% égale au terme de recherche. Nb: Le terme de recherche n'est pas sensible à la casse.",
+                        "pattern_exact": "Utiliser le motif exact",
+                        "pattern_exact_description": "Utilisez le motif comme terme de recherche, qui doit être identique à 100 % à la description de l'événement. Insensible à la casse.",
                         "picture_url": "URL de l'image",
-                        "picture_url_description": "Si une URL d'image est indiquée, l'image correspondante sera affichée au lieu de l'icône. Placez une image dans le dossier `/config/www` et utilisez `/local/[nom de fichier]`"
+                        "picture_url_description": "Si une URL d'image est indiquée, l'image correspondante sera affichée au lieu de l'icône. Placez une image dans le dossier `/config/www` et utilisez `/local/[nom de fichier]`",
+                        "max_items": "Nombre maximum d'éléments",
+                        "max_items_description": "Nombre maximum d'événements à afficher pour ce motif (par défaut 1).",
+                        "task_interval": "Intervalle de tâche",
+                        "task_interval_description": "Nombre de jours après l'achèvement pour que cette tâche se répète (0 pour désactiver)."
                     }
                 }
             }
@@ -141,8 +145,8 @@
             "daysleftend_more_till": "Fini dans <DAYS> jours\nà <END>",
             "daysleftdue": "dû dans <DAYS> jour",
             "daysleftdue_more": "dû dans <DAYS> jours",
-            "daysleftdue_till": "due in <DAYS> day\nat <END>",
-            "daysleftdue_more_till": "due in <DAYS> days\nat <END>"
+            "daysleftdue_till": "dû dans <DAYS> jour\nà <END>",
+            "daysleftdue_more_till": "dû dans <DAYS> jours\nà <END>"
         }
     }
 }

@@ -1,113 +1,127 @@
 {
-  "editor": {
-    "form": {
-      "color_picker": {
-        "values": {
-          "default": "Alapértelmezett szín"
-        }
-      },
-      "day_style": {
-        "title": "Esemény idejének megjelenítése mint",
-        "values": {
-          "default": "Dátum",
-          "counter": "nap múlva",
-          "weekday": "a hét napja",
-          "custom": "Saját dátumformátum"
-        }
-      },
-      "day_style_format": {
-        "title": "Egyéni dátumformátum",
-        "helper": "Saját dátumformátum meghatározása. (dd = nap 0 előtaggal, d = nap, MM = hónap 0 előtaggal, M = hónap, yy = év rövid, yyyy = év hosszú) Pl. dd.MM.yyyy = 03.04.2024, ahol d.M.yy = 3.4.24 lenne az eredmény."
-      },
-      "card_style": {
-        "title": "Megjelenítés",
-        "values": {
-          "card": "Standard kártya",
-          "chip": "Chipkártya",
-          "icon": "Ikon"
-        }
-      },
-      "alignment_style": {
-          "title": "Kiegyenlítés",
-          "values": {
-              "left": "balra",
-              "center": "központosított",
-              "right": "jobbra",
-              "space": "spaced"
-          }
-      },
-      "color_mode": {
-        "title": "Alkalmazza a színt",
-        "values": {
-          "background": "Háttér",
-          "icon": "Ikon"
-        }
-      },
-      "layout_picker": {
-        "values": {
-          "default": "Alapértelmezett elrendezés",
-          "vertical": "Függőleges elrendezés",
-          "horizontal": "Vízszintes elrendezés"
-        }
-      },
-      "tabs": {
-        "settings": "Beállítások",
-        "appearance": "Kinézet",
-        "patterns": "Minták"
-      },
-      "refresh_rate": {
-        "title": "Aktualizálási időintervallum",
-        "helper": "A naptár változásainak ellenőrzése x percenként."
-      }
-    },
-    "card": {
-      "generic": {
-        "icon_color": "Ikon szín",
-        "layout": "Elrendezés",
-        "fill_container": "Konténer kitöltése",
-        "next_days": "Jövőbeli napok száma",
+    "editor": {
+        "form": {
+            "color_picker": {
+                "values": {
+                    "default": "Alapértelmezett szín"
+                }
+            },
+            "day_style": {
+                "title": "Esemény idejének megjelenítése mint",
+                "values": {
+                    "default": "Dátum",
+                    "counter": "nap múlva",
+                    "weekday": "a hét napja",
+                    "custom": "Saját dátumformátum"
+                }
+            },
+            "day_style_format": {
+                "title": "Egyéni dátumformátum",
+                "helper": "Saját dátumformátum meghatározása. (dd = nap 0 előtaggal, d = nap, MM = hónap 0 előtaggal, M = hónap, yy = év rövid, yyyy = év hosszú) Pl. dd.MM.yyyy = 03.04.2024, ahol d.M.yy = 3.4.24 lenne az eredmény."
+            },
+            "card_style": {
+                "title": "Megjelenítés",
+                "values": {
+                    "card": "Standard kártya",
+                    "chip": "Chipkártya",
+                    "icon": "Ikon"
+                }
+            },
+            "alignment_style": {
+                "title": "Kiegyenlítés",
+                "values": {
+                    "left": "balra",
+                    "center": "központosított",
+                    "right": "jobbra",
+                    "space": "spaced"
+                }
+            },
+            "color_mode": {
+                "title": "Alkalmazza a színt",
+                "values": {
+                    "background": "Háttér",
+                    "icon": "Ikon"
+                }
+            },
+            "layout_picker": {
+                "values": {
+                    "default": "Alapértelmezett elrendezés",
+                    "vertical": "Függőleges elrendezés",
+                    "horizontal": "Vízszintes elrendezés"
+                }
+            },
+            "tabs": {
+                "settings": "Beállítások",
+                "appearance": "Kinézet",
+                "patterns": "Minták"
+            },
+            "refresh_rate": {
+                "title": "Aktualizálási időintervallum",
+                "helper": "A naptár változásainak ellenőrzése x percenként."
+            },
+            "location": {
+                "title": "Helyszín",
+                "helper": "Események szűrése a megadott helyszín alapján."
+            },
+            "only_all_day_events": {
+                "title": "Csak egész napos események",
+                "helper": "Aktiválja ezt az opciót, ha csak egész napos bejegyzéseket szeretne használni."
+            }
+        },
+        "card": {
+            "generic": {
+                "icon_color": "Ikon szín",
+                "layout": "Elrendezés",
+                "fill_container": "Konténer kitöltése",
+                "next_days": "Jövőbeli napok száma",
                 "max_items": "Megjelenített elemek max. száma",
-        "filter_events": "Filter events by patterns",
+                "filter_events": "Filter events by patterns",
                 "show_completed": "Show completed tasks",
                 "highlight_today": "Mai események kiemelése",
                 "highlight_overdue": "Highlight overdue tasks",
                 "show_empty": "Show empty state",
-        "drop_todayevents_from": "From what time to hide today's events",
-        "full_size": "Margó nélküli kártya",
-        "use_summary": "Esemény összegzés a cimke helyett",
-        "hide_time_range": "Rejtsd el az időt",
-        "event_grouping": "Csak a következő eseményt jeleníti meg mintánként",
-        "icon_size": "Ikon mérete",
-        "with_label": "Címke megjelenítése"
-      },
-      "event": {
-        "pattern": {
-          "title": "Minta szerkesztése",
-          "edit": "szerkeszt",
-          "delete": "töröl",
-          "create": "Új minta létrehozása",
-          "new_custom_label": "Új minta",
-          "type": {
-            "type1": "Type 1",
-            "type2": "Type 2",
-            "type3": "Type 3",
-            "type4": "Type 4",
-            "others": "Egyéb"
-          },
-          "fields": {
-            "label": "Cimke",
-            "color": "Szín",
-            "icon": "Ikon",
-            "pattern": "Felismerési minta",
-            "picture_url": "Kép URL címe",
-            "picture_url_description": "Ha egy kép URL címe van megadva, akkor az ikon helyett a megfelelő kép jelenik meg. Helyezzen el egy képet a `/config/www` mappában, és használja a `/local/[fájlnév]`"
-          }
+                "drop_todayevents_from": "From what time to hide today's events",
+                "full_size": "Margó nélküli kártya",
+                "use_summary": "Esemény összegzés a cimke helyett",
+                "hide_time_range": "Rejtsd el az időt",
+                "event_grouping": "Csak a következő eseményt jeleníti meg mintánként",
+                "icon_size": "Ikon mérete",
+                "with_label": "Címke megjelenítése"
+            },
+            "event": {
+                "pattern": {
+                    "title": "Minta szerkesztése",
+                    "edit": "szerkeszt",
+                    "delete": "töröl",
+                    "create": "Új minta létrehozása",
+                    "new_custom_label": "Új minta",
+                    "type": {
+                        "type1": "Type 1",
+                        "type2": "Type 2",
+                        "type3": "Type 3",
+                        "type4": "Type 4",
+                        "others": "Egyéb"
+                    },
+                    "fields": {
+                        "label": "Cimke",
+                        "color": "Szín",
+                        "icon": "Ikon",
+                        "pattern": "Felismerési minta",
+                        "picture_url": "Kép URL címe",
+                        "picture_url_description": "Ha egy kép URL címe van megadva, akkor az ikon helyett a megfelelő kép jelenik meg. Helyezzen el egy képet a `/config/www` mappában, és használja a `/local/[fájlnév]`",
+                        "pattern_exact": "Pontos minta használata",
+                        "pattern_exact_description": "A minta használata keresési kifejezésként, amelynek 100%-ban meg kell egyeznie a leírással. Kis- és nagybetűkre nem érzékeny.",
+                        "max_items": "Maximális elemszám",
+                        "max_items_description": "Az ezen minta alapján megjelenítendő események maximális száma (alapértelmezett: 1).",
+                        "task_interval": "Feladat intervallum",
+                        "task_interval_description": "A befejezés után hány nappal ismétlődjön meg a feladat (0 a kikapcsoláshoz)."
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  "card": {
-    "not_found": {
+    },
+    "card": {
+        "not_found": {
             "title": "Entitás nem található",
             "description": "Please select at least one calendar entity."
         },
@@ -115,17 +129,25 @@
             "title": "All caught up!",
             "description": "Currently no events found."
         },
-    "event": {
-      "today": "ma",
-      "tomorrow": "holnap",
-      "day": "<DAY>",
-      "today_from_till": "Ma\n<START>-tól <END>-ig",
-      "tomorrow_from_till": "Holnap\n<START> és <END> között",
-      "day_from_till": "<DAY>\n<START> és <END> között",
-      "daysleft": "<DAYS> napon belül",
-      "daysleft_more": "<DAYS> napon belül",
-      "daysleft_from_till": "<DAYS> napon belül\n<START> és <END> között",
-      "daysleft_more_from_till": "<DAY> napon belül\n<START> és <END> között"
+        "event": {
+            "today": "ma",
+            "tomorrow": "holnap",
+            "day": "<DAY>",
+            "today_from_till": "Ma\n<START>-tól <END>-ig",
+            "tomorrow_from_till": "Holnap\n<START> és <END> között",
+            "day_from_till": "<DAY>\n<START> és <END> között",
+            "daysleft": "<DAYS> napon belül",
+            "daysleft_more": "<DAYS> napon belül",
+            "daysleft_from_till": "<DAYS> napon belül\n<START> és <END> között",
+            "daysleft_more_from_till": "<DAY> napon belül\n<START> és <END> között",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "esedékes <DAYS> nap múlva\nekkor: <END>",
+            "daysleftdue_more_till": "esedékes <DAYS> nap múlva\nekkor: <END>"
+        }
     }
-  }
 }

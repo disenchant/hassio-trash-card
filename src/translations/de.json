@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Aktualisierungsintervall",
                 "helper": "Prüfung aller x Minuten auf Änderungen im Kalender."
+            },
+            "location": {
+                "title": "Standort",
+                "helper": "Ereignisse nach Standort filtern. Wenn nichts angegeben ist, werden alle Standorte verwendet."
+            },
+            "only_all_day_events": {
+                "title": "Nur ganztägige Ereignisse",
+                "helper": "Aktivieren Sie diese Option, wenn Sie nur ganztägige Einträge verwenden möchten."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Symbol",
                         "pattern": "Mustererkennung (z.B. Rest für Restmüll)",
                         "picture_url": "Bild-URL",
-                        "picture_url_description": "Wenn eine Bild-URL angegeben wird, wird das entsprechende Bild anstelle des Icons angezeigt. Lege dazu einfach ein Bild in dem `/config/www` Ordner ab und verwende `/local/[Dateiname]`."
+                        "picture_url_description": "Wenn eine Bild-URL angegeben wird, wird das entsprechende Bild anstelle des Icons angezeigt. Lege dazu einfach ein Bild in dem `/config/www` Ordner ab und verwende `/local/[Dateiname]`.",
+                        "pattern_exact": "Exaktes Muster verwenden",
+                        "pattern_exact_description": "Verwendet das Muster als Suchbegriff, der zu 100% mit der Beschreibung des Kalenderereignisses übereinstimmen muss. Groß-/Kleinschreibung wird ignoriert.",
+                        "max_items": "Maximale Anzahl",
+                        "max_items_description": "Maximale Anzahl der für dieses Muster anzuzeigenden Ereignisse (Standard ist 1).",
+                        "task_interval": "Aufgabenintervall",
+                        "task_interval_description": "Tage nach Abschluss, nach denen diese Aufgabe wiederkehren soll (0 zum Deaktivieren)."
                     }
                 }
             }
@@ -132,7 +146,8 @@
             "daysleftend_more_till": "endet in <DAYS> Tagen\num <END> Uhr",
             "daysleftdue": "fällig in <DAYS> Tag",
             "daysleftdue_more": "fällig in <DAYS> Tagen",
-            "daysleftdue_till": "due in <DAYS> day\nat <END>",
-            "daysleftdue_more_till": "due in <DAYS> days\nat <END>"        }
+            "daysleftdue_till": "fällig in <DAYS> Tag\num <END> Uhr",
+            "daysleftdue_more_till": "fällig in <DAYS> Tagen\num <END> Uhr"
+        }
     }
 }

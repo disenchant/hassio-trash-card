@@ -58,6 +58,14 @@
             "refresh_rate": {
                 "title": "Interval realizácie",
                 "helper": "Kontrola zmien v kalendári každých x minút."
+            },
+            "location": {
+                "title": "Lokalita",
+                "helper": "Filtrovať udalosti podľa zadanej lokality."
+            },
+            "only_all_day_events": {
+                "title": "Iba celodenné udalosti",
+                "helper": "Aktivujte túto možnosť, ak chcete používať iba celodenné záznamy."
             }
         },
         "card": {
@@ -100,7 +108,13 @@
                         "icon": "Ikona",
                         "pattern": "Vzor detekcie",
                         "picture_url": "URL obrázku",
-                        "picture_url_description": "Ak je zadaná adresa URL obrázka, namiesto ikony sa zobrazí príslušný obrázok. Umiestnite obrázok do priečinka `/config/www` a použite `/local/[meno súboru]`."
+                        "picture_url_description": "Ak je zadaná adresa URL obrázka, namiesto ikony sa zobrazí príslušný obrázok. Umiestnite obrázok do priečinka `/config/www` a použite `/local/[meno súboru]`.",
+                        "pattern_exact": "Použiť presný vzor",
+                        "pattern_exact_description": "Použiť vzor ako hľadaný výraz, ktorý musí byť 100% zhodný s popisom. Nerozlišuje veľkosť písma.",
+                        "max_items": "Maximálny počet položiek",
+                        "max_items_description": "Maximálny počet nadchádzajúcich udalostí, ktoré sa majú zobraziť pre tento vzor (predvolené je 1).",
+                        "task_interval": "Interval úlohy",
+                        "task_interval_description": "Počet dní po dokončení, kedy sa má táto úloha znova vytvoriť (0 pre zakázanie)."
                     }
                 }
             }
@@ -125,7 +139,15 @@
             "daysleft": "za <DAYS> dní",
             "daysleft_more": "za <DAYS> dní",
             "daysleft_from_till": "za <DAYS> dní\nmedzi <START> a <END>",
-            "daysleft_more_from_till": "za <DAYS> dní\nmedzi <START> a <END>"
+            "daysleft_more_from_till": "za <DAYS> dní\nmedzi <START> a <END>",
+            "daysleftend": "ends in <DAYS> day",
+            "daysleftend_more": "ends in <DAYS> days",
+            "daysleftend_till": "ends in <DAYS> day\nat <END>",
+            "daysleftend_more_till": "ends in <DAYS> days\nat <END>",
+            "daysleftdue": "due in <DAYS> day",
+            "daysleftdue_more": "due in <DAYS> days",
+            "daysleftdue_till": "splatné za <DAYS> deň\no <END>",
+            "daysleftdue_more_till": "splatné za <DAYS> dní\no <END>"
         }
     }
 }
